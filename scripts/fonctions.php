@@ -24,6 +24,8 @@ function TitrePage($page) {
             break;
         case '/vva/modifierReservation.php': $page = 'VVA - Modification de la réservation';
             break;
+        case '/vva/admin.php': $page = 'VVA - Administration';
+            break;
     }
     echo $page;
 }

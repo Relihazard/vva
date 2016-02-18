@@ -15,7 +15,7 @@ if ($sql == false) {
     header('location: ../../index.php'); //renvoie l'utilisateur sur la page après 10 secondes (obligation de passer par URL et non location)
 } else {
     $data = $sql->fetch();
-    if ($data['USER'] == $loginUtilisateur && $data['MDP'] == $mdpUtilisateur) {
+    if ($data['USER'] == $loginUtilisateur && $data['MDP'] == $mdpUtilisateur && $data['DATESUPRESSION'] == NULL) {
         $_SESSION['login'] = $loginUtilisateur;
         $_SESSION['droits'] = $data['TYPECOMPTE'];
         header("location: ../../index.php");
